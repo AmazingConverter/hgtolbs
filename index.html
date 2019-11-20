@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <title> kg to lbs -  kilograms into pounds - Mass and Weight Conversion</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    
+    <div class="container">        
+        <main role="main">            
+			<section>
+				<div class="row calculator">
+					<div class="col-xs-12">
+						<h1> kg to lbs -  kilograms into pounds</h1>
+					</div>
+					<div class="col-xs-12 col-xs-12">
+						<div class="input-group form-group-lg">
+							<input type="number" id="amountMaster" class="form-control" value="1" aria-label="set kg" onchange="Calculate()" onkeyup="Calculate()">
+							<span class="input-group-addon">kg</span>
+							<span class="input-group-addon">=</span>
+							<input type="number" id="amountSlave" class="form-control" value="2.20462" readonly="readonly" aria-label="set lbs">
+							<span class="input-group-addon">lbs</span>
+						</div>
+					</div>
+					<div class="col-xs-12">
+						<a href="https://howkgtolbs.com/"> kg to lbs -  kilograms into pounds</a>
+					</div>					
+				</div>
+			</section>    
+        </main>
+    </div>
+
+		<script>
+			function Calculate() {
+				var am = parseFloat(document.getElementById("amountMaster").value.replace(",", "."));
+				var uf = parseFloat(2.20462262);
+				document.getElementById("amountSlave").value = (am * uf).toPrecision(10);
+			}
+		</script>
+</body>
+</html>
